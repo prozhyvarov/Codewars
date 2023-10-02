@@ -1,4 +1,68 @@
 
+// function accum(s) {
+//   const arr = s.toLowerCase().split("");
+//   let res = '';
+//   for (i = 0; i <= arr.length-1; i += 1){
+//     res += arr[i].toUpperCase() + arr[i].repeat(i);
+//     if (i < arr.length - 1) {
+//       res += "-";
+//     }
+//   }
+//   return res;
+// }
+// accum("Asd")
+// accum("ZpglnRxqenU");
+// accum("NyffsGeyylB");
+// accum("MjtkuBovqrU");
+
+// function minMax(arr) {
+//   return [Math.min(...arr), Math.max(...arr)];
+// }
+
+// minMax([1, 2, 3, 4, 5]);
+// minMax([2334454, 5]);
+// minMax([5]);
+
+// function findShort(s) { 
+//   let minWordLength = s.split(" ")[0].length;
+//   for (let i = 1; i <= s.split(" ").length-1; i += 1){
+//     const currentWordLength = s.split(" ")[i].length;
+//     if (currentWordLength < minWordLength) {
+//       minWordLength = currentWordLength;
+//     }
+//   }
+//   return minWordLength;
+// }
+
+// findShort("bitcoin take over the world maybe who knows perhaps");
+// findShort("turns out random test cases are easier than writing out basic ones");
+// findShort("Let's travel abroad shall we");
+
+
+// function countSheeps(sheeps) {
+//    const presentSheep = sheeps.filter((sheep) => sheep === true);
+//    const count = presentSheep.length;
+//    return count;
+// }
+
+// countSheeps([])
+// countSheeps([undefined])
+// countSheeps([null])
+// countSheeps([false])
+// countSheeps([true])
+// countSheeps([undefined,null,false,true])
+// countSheeps([undefined,null,false,true,true,false,null,undefined])
+// countSheeps([true,true,true,false,true,true,true,true,true,false,true,false,true,false,false,true,true,true,true,true,false,false,true,true])
+
+
+// function repeatStr(n, s) {
+//   return s.repeat(n);
+// }
+
+// repeatStr(3, "*");
+// repeatStr(5, "#");
+// repeatStr(2, "ha ");
+
 // function nameShuffler(str) {
 //   return str.split(" ").reverse().join(" ")
 // }
