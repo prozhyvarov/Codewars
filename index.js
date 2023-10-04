@@ -1,4 +1,148 @@
 
+// function checkExam(array1, array2) {
+//     let res = 0;
+//     for (let i = 0; i < array1.length; i+=1) {
+//         const correctAnswer = array1[i];
+//         const studentAnswer = array2[i];
+//         if (studentAnswer === '') {
+//             res += 0;
+//         } else if (studentAnswer === correctAnswer) {
+//             res += 4;
+//         } else {
+//             res -= 1;
+//         }
+//     }
+//     return Math.max(res, 0);
+// }
+
+// checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]);
+// checkExam(["a", "a", "c", "b"], ["a", "a", "b", ""]);
+// checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]);
+// checkExam(["b", "c", "b", "a"], ["", "a", "a", "c"]);
+
+
+// function findNextSquare(sq) {
+//     return Number.isInteger(Math.sqrt(sq)) ? Math.pow((Math.sqrt(sq) + 1), 2) : -1;
+// }
+
+// findNextSquare(2);
+// findNextSquare(121);
+// findNextSquare(625);
+// findNextSquare(319225);
+// findNextSquare(15241383936);
+
+// function twiceAsOld(dadYearsOld, sonYearsOld) {
+//   const x = Math.abs(dadYearsOld - 2 * sonYearsOld);
+//   return x;
+// }
+
+// twiceAsOld(36, 7);
+// twiceAsOld(55, 30);
+// twiceAsOld(42, 21);
+// twiceAsOld(22, 1);
+// twiceAsOld(29, 0);
+
+// function past(h, m, s) {
+//     return h * 3600000 + m * 60000 + s * 1000;
+// }
+
+// past(0, 1, 1);
+// past(1, 1, 1);
+// past(0, 0, 0);
+// past(1, 0, 1);
+// past(1, 0, 0);
+
+// function duplicateEncode(word) {
+//    return word
+//      .toLowerCase()
+//      .split("")
+//      .map((char, index, array) =>
+//        array.indexOf(char) === array.lastIndexOf(char) ? "(" : ")"
+//      )
+//      .join("");
+// }
+
+// duplicateEncode("din");
+// duplicateEncode("recede");
+// duplicateEncode("Success");
+// duplicateEncode("(( @");
+
+// function isUpperCase(str) {
+//     return str === str.toUpperCase();
+// };
+
+// isUpperCase("c");
+// isUpperCase("C");
+// isUpperCase("hello I AM DONALD");
+// isUpperCase("HELLO I AM DONALD");
+// isUpperCase("ACSKLDFJSgSKLDFJSKLDFJ");
+// isUpperCase("ACSKLDFJSGSKLDFJSKLDFJ");
+
+// function rentalCarCost(d) {
+//   switch (true) {
+//     case d >= 1 && d < 3:
+//       return d * 40;
+//       break;
+//     case d >= 3 && d < 7:
+//       return d * 40 - 20;
+//       break;
+//     case d >= 7:
+//       return d * 40 - 50;
+//       break;
+//   }
+// }
+
+// rentalCarCost(1);
+// rentalCarCost(2);
+// rentalCarCost(3);
+// rentalCarCost(5);
+// rentalCarCost(7);
+
+// function solution(nums) {
+//     if(nums===null ||!nums.length) return []
+//     return nums.sort((a, b) => a - b);
+// }
+
+// solution([1, 2, 3, 10, 5]);
+// solution(null);
+// solution([]);
+// solution([20, 2, 10]);
+
+// function combat(health, damage) {
+//     return health > damage ? health - damage : 0;
+// }
+
+// combat(100, 5);
+// combat(20, 30);
+
+// function reverse(string) {
+//   return string.split(" ").reverse().join(" ");
+// }
+
+// console.log(reverse("I am an expert at this"));
+
+// function sumStr(a, b) {
+//     const one = parseInt(a) || 0;
+//     const two = parseInt(b) || 0;
+//     return String(one + two);
+// }
+
+// sumStr("4", "5");
+// sumStr("34", "5");
+// sumStr("", "");
+
+// function getCount(str) {
+// //     return str.split("").reduce((acc, num) => {
+// //         if (num === "a" || num === "e" || num === "i" || num === "o" || num === "u") {
+// //           return acc+1
+// //         }
+// //         return acc
+//     //   },0)
+//     return str.split("").filter((char) =>char === "a" ||char === "e" ||char === "i" ||char === "o" ||char === "u").length
+// }
+
+// getCount("abracadabra");
+
 // function accum(s) {
 //   const arr = s.toLowerCase().split("");
 //   let res = '';
@@ -23,7 +167,7 @@
 // minMax([2334454, 5]);
 // minMax([5]);
 
-// function findShort(s) { 
+// function findShort(s) {
 //   let minWordLength = s.split(" ")[0].length;
 //   for (let i = 1; i <= s.split(" ").length-1; i += 1){
 //     const currentWordLength = s.split(" ")[i].length;
@@ -37,7 +181,6 @@
 // findShort("bitcoin take over the world maybe who knows perhaps");
 // findShort("turns out random test cases are easier than writing out basic ones");
 // findShort("Let's travel abroad shall we");
-
 
 // function countSheeps(sheeps) {
 //    const presentSheep = sheeps.filter((sheep) => sheep === true);
@@ -53,7 +196,6 @@
 // countSheeps([undefined,null,false,true])
 // countSheeps([undefined,null,false,true,true,false,null,undefined])
 // countSheeps([true,true,true,false,true,true,true,true,true,false,true,false,true,false,false,true,true,true,true,true,false,false,true,true])
-
 
 // function repeatStr(n, s) {
 //   return s.repeat(n);
@@ -80,8 +222,6 @@
 // sortByLength(["", "Moderately", "Brains", "Pizza"]);
 // sortByLength(["Longer", "Longest", "Short"]);
 
-
-
 // function diamond(n) {
 //   if ( n % 2 === 0||n<=0) return null
 //   let result = "";
@@ -98,7 +238,6 @@
 // diamond(5);
 // diamond(2);
 
-
 // function solution(str, ending) {
 //   return str.endsWith(ending);
 // }
@@ -106,15 +245,12 @@
 // solution("abcde", "cde");
 // solution("abcde", "abc");
 
-
 // function between(a, b) {
 //   return Array.from({ length: b-a+1 }, (v, i) => a+i)
 // }
 
 // between(1, 4);
 // between(-2, 2);
-
-
 
 // function areYouPlayingBanjo(name) {
 //   return name.split("")[0].toUpperCase() === "R"
@@ -130,7 +266,6 @@
 // areYouPlayingBanjo("bravo");
 // areYouPlayingBanjo("rolf");
 
-
 // var capitals = function (word) {
 //     const indexes = [];
 //     for (let i = 0; i < word.length; i++) {
@@ -142,7 +277,7 @@
 // };
 // capitals("CodEWaRs");
 
-// function fakeBin(x) { 
+// function fakeBin(x) {
 //   return x.split("").map((n) => n >= 5 ? 1 : 0).join("");
 // }
 
@@ -159,8 +294,6 @@
 // friend(["Jimm", "Cari", "aret", "truehdnviegkwgvke", "sixtyiscooooool"]);
 // friend(["Love", "Your", "Face", "1"]);
 
-
-
 // function problem(x) {
 //   return typeof x === "number" ? x * 50 + 6 : "Error";
 // }
@@ -168,7 +301,7 @@
 // problem(1);
 // problem("hello");
 
-// function sumMix(x) { 
+// function sumMix(x) {
 //   return x.reduce((acc, num) => {
 //     const number = parseInt(num);
 //     if (!isNaN(number)) {
@@ -182,8 +315,6 @@
 // console.log(sumMix(["5", "0", 9, 3, 2, 1, "9", 6, 7]));
 // console.log(sumMix(["3", 6, 6, 0, "5", 8, 5, "6", 2, "0"]));
 
-
-
 // function removeUrlAnchor(url) {
 //   const oneArr = [...url]
 //     url.split("").map(x => {
@@ -195,7 +326,6 @@
 // console.log(removeUrlAnchor("www.codewars.com#about"));
 // console.log(removeUrlAnchor("www.codewars.com/katas/?page=1#about"));
 // console.log(removeUrlAnchor('www.codewars.com/katas/'));
-
 
 // var uniqueInOrder = function (iterable) {
 //   const lowerInput = String(iterable);
@@ -214,7 +344,6 @@
 // console.log(uniqueInOrder("AAAABBBCCDAABBB"));
 // console.log(uniqueInOrder("ABBCcAD"));
 // console.log(uniqueInOrder([1, 2, 2, 3, 3]));
-
 
 // function removeExclamationMarks(s) {
 //     return s.split("").filter((el) => el !== "!").join("");
@@ -237,7 +366,6 @@
 // console.log(findDifference([11, 2, 5], [1, 10, 8]));
 // console.log(findDifference([4, 4, 7], [3, 9, 3]));
 // console.log(findDifference([15, 20, 25], [10, 30, 25]));
-
 
 // function betterThanAverage(classPoints, yourPoints) {
 //     classPoints.push(yourPoints);
