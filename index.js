@@ -1,3 +1,238 @@
+function peopleWithAgeDrink(old) {
+  switch (true) {
+    case old < 14:
+      return "drink toddy";
+      break;
+    case old < 18 && old>=14:
+      return "drink coke";
+      break;
+    case old < 21 && old>=18:
+      return "drink beer";
+      break;
+    case old >= 21:
+      return "drink whisky";
+      break;
+  }
+}
+
+peopleWithAgeDrink(13);
+peopleWithAgeDrink(17);
+peopleWithAgeDrink(18);
+peopleWithAgeDrink(20);
+peopleWithAgeDrink(30);
+
+// function addLength(str) {
+//     return str.split(" ").map((x) => `${x} ${x.length}`);
+// }
+
+// addLength("apple ban");
+// addLength("you will win")
+
+// function noBoringZeros(n) {
+//     if (n === 0) return 0;
+//     const numStr = n.toString().replace(/0+$/, '');
+//     return parseInt(numStr);
+// }
+
+// noBoringZeros(1450);
+// noBoringZeros(960000);
+// noBoringZeros(1050);
+// noBoringZeros(-1050);
+// noBoringZeros(105);
+// noBoringZeros(0);
+
+// function take(arr, n) {
+//     return arr.slice(0, n);
+// }
+
+// take([0, 1, 2, 3, 5, 8, 13], 3);
+
+// function solution(str) {
+//   return console.log(str.split("").reverse().join(""));
+// }
+
+// solution("world");
+// solution("");
+// solution("hello");
+
+// function hello(name) {
+//     if (!name) return "Hello, World!"
+//     const lowerCaseNameArr =
+//       name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+//     return `Hello, ${lowerCaseNameArr}!`;
+// }
+
+// hello("alice");
+// hello();
+// hello("");
+// hello("johN");
+
+// function arithmetic(a, b, operator) {
+//     switch (true) {
+//       case operator === "add":
+//         return a + b;
+//         break;
+//       case operator === "subtract":
+//         return a - b;
+//         break;
+//       case operator === "multiply":
+//         return a * b;
+//         break;
+//       case operator === "divide":
+//         return a / b;
+//         break;
+//     }
+// }
+
+// arithmetic(1, 2, "add");
+// arithmetic(8, 2, "subtract");
+// arithmetic(5, 2, "multiply");
+// arithmetic(8, 2, "divide");
+
+// function sumDigits(number) {
+//     const absNumber = Math.abs(number)
+//     return absNumber.toString().split("").map(x => Number(x)).reduce((acc, num) => acc += num, 0);
+// }
+
+// sumDigits(10);
+// sumDigits(99);
+// sumDigits(-32);
+
+// function expandedForm(num) {
+//   const arr = num.toString().split("");
+//   return arr
+//     .map((dig, idx, arr) => dig * Math.pow(10, arr.length - idx - 1))
+//     .filter((val) => val !== 0)
+//     .join(" + ");
+// }
+
+// expandedForm(12);
+// expandedForm(42);
+// expandedForm(70304);
+
+// function smallEnough(a, limit) {
+//     return a.every((x) => x <= limit);
+//  }
+
+// smallEnough([66, 101], 200)
+// smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100);
+// smallEnough([101, 45, 75, 105, 99, 107], 107);
+// smallEnough([80, 117, 115, 104, 45, 85, 112, 115], 120);
+
+// function XO(str) {
+//     const arr = str.toLowerCase().split("");
+//     const xArr = arr.filter((char) => char === "x");
+//     const oArr = arr.filter((char) => char === "o");
+//     return xArr.length===oArr.length
+// }
+
+// XO("xo");
+// XO("xxOo");
+// XO("xxxm");
+// XO("Oo");
+// XO("ooom");
+// XO("zpzpzpp");
+
+// function welcome(language) {
+//   const database = [
+//     ["english", "Welcome"],
+//     ["czech", "Vitejte"],
+//     ["danish", "Velkomst"],
+//     ["dutch", "Welkom"],
+//     ["estonian", "Tere tulemast"],
+//     ["finnish", "Tervetuloa"],
+//     ["flemish", "Welgekomen"],
+//     ["french", "Bienvenue"],
+//     ["german", "Willkommen"],
+//     ["irish", "Failte"],
+//     ["italian", "Benvenuto"],
+//     ["latvian", "Gaidits"],
+//     ["lithuanian", "Laukiamas"],
+//     ["polish", "Witamy"],
+//     ["spanish", "Bienvenido"],
+//     ["swedish", "Valkommen"],
+//     ["welsh", "Croeso"]
+//   ];
+
+//   const lowercaseLanguage = language.toLowerCase();
+//   for (const entry of database) {
+//     const [dbLanguage, greeting] = entry;
+//     if (dbLanguage === lowercaseLanguage) {
+//       return greeting;
+//     }
+//   }
+//   return "Welcome";
+// }
+
+// function greet(language) {
+//     const database = [
+//       ("english", "Welcome"),
+//       ("czech", "Vitejte"),
+//       ("danish", "Velkomst"),
+//       ("dutch", "Welkom"),
+//       ("estonian", "Tere tulemast"),
+//       ("finnish", "Tervetuloa"),
+//       ("flemish", "Welgekomen"),
+//       ("french", "Bienvenue"),
+//       ("german", "Willkommen"),
+//       ("irish", "Failte"),
+//       ("italian", "Benvenuto"),
+//       ("latvian", "Gaidits"),
+//       ("lithuanian", "Laukiamas"),
+//       ("polish", "Witamy"),
+//       ("spanish", "Bienvenido"),
+//       ("swedish", "Valkommen"),
+//       ("welsh", "Croeso"),
+//     ];
+//     const languageLower = language.toLowerCase();
+//     for (const entry of database) {
+//       const [dbLanguage, greeting] = entry;
+//       if (dbLanguage === languageLower) {
+//         return greeting;
+//       }
+//     }
+//     return "Welcome";
+// }
+
+// greet("english");
+// greet("dutch");
+// greet("IP_ADDRESS_INVALID");
+
+// function sumTwoSmallestNumbers(numbers) {
+//   const sortedArr = numbers.slice().sort((a, b) => a - b);
+//     return sortedArr.slice(0, 2).reduce((acc, num) => acc + num, 0);
+// }
+
+// sumTwoSmallestNumbers([5, 8, 12, 19, 22]);
+// sumTwoSmallestNumbers([15, 28, 4, 2, 43]);
+// sumTwoSmallestNumbers([3, 87, 45, 12, 7]);
+// sumTwoSmallestNumbers([23, 71, 33, 82, 1]);
+// sumTwoSmallestNumbers([52, 76, 14, 12, 4]);
+
+// const sortedArr = arr.slice().sort((a, b) => a - b); // Создаем отсортированную копию массива
+// return sortedArr.slice(0, 2);
+
+// function stray(numbers) {
+// let res = 0;
+// for (let num of numbers) {
+//   res ^= num;
+// }
+// return res;
+// }
+
+// const stray = (numbers) =>
+//   numbers.find((num) => numbers.indexOf(num) === numbers.lastIndexOf(num));
+
+// stray([1, 1, 2]);
+// stray([1, 2, 1]);
+// stray([2, 1, 1]);
+
+// function countBy(x, n) {
+//   return Array.from({ length: n }, (v, k) => x * (k + 1));
+// }
+
+// countBy(1, 10);
+// countBy(2, 5);
 
 // function checkExam(array1, array2) {
 //     let res = 0;
@@ -19,7 +254,6 @@
 // checkExam(["a", "a", "c", "b"], ["a", "a", "b", ""]);
 // checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]);
 // checkExam(["b", "c", "b", "a"], ["", "a", "a", "c"]);
-
 
 // function findNextSquare(sq) {
 //     return Number.isInteger(Math.sqrt(sq)) ? Math.pow((Math.sqrt(sq) + 1), 2) : -1;
